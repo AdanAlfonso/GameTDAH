@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menú de Juegos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="menu.css" />
+</head>
+<body>
+  <div class="bg-space" aria-hidden="true"></div>
+
+  <main class="menu" role="main" aria-labelledby="tituloMenu">
+    <header class="menu__header">
+      <h1 id="tituloMenu">MENÚ DE JUEGOS</h1>
+      <p class="menu__subtitle">Elige una emoción para comenzar</p>
+    </header>
+
+    <section class="menu__grid" aria-label="Lista de juegos por emoción">
+      <a class="card alegria" href="#" aria-label="Jugar Alegría">
+        <span class="card__emoji">😊</span>
+        <span class="card__label">Alegría</span>
+      </a>
+
+      <a class="card tristeza" href="#" aria-label="Jugar Tristeza">
+        <span class="card__emoji">😢</span>
+        <span class="card__label">Tristeza</span>
+      </a>
+
+      <a class="card temor" href="#" aria-label="Jugar Temor">
+        <span class="card__emoji">😨</span>
+        <span class="card__label">Temor</span>
+      </a>
+
+      <a class="card frustracion" href="#" aria-label="Jugar Frustración">
+        <span class="card__emoji">😤</span>
+        <span class="card__label">Frustración</span>
+      </a>
+
+      <a class="card enojo" href="#" aria-label="Jugar Enojo">
+        <span class="card__emoji">😡</span>
+        <span class="card__label">Enojo</span>
+      </a>
+    </section>
+
+    <footer class="menu__footer">
+      <button class="btn-secondary" id = "btnCerrarSesion" type="button">Cerrar sesión</button>
+    </footer>
+  </main>
+
+   <!-- Script para simular regreso al index -->
+  <script>
+    // Simula el regreso al index.html sin usar PHP
+    document.getElementById('btnCerrarSesion').addEventListener('click', () => {
+      document.body.classList.add('body-leave'); // opcional, si agregas animación de salida
+      setTimeout(() => {
+        window.location.href = 'index.html?from=menu';
+      }, 400);
+    });
+  </script>
+</body>
+</html>
