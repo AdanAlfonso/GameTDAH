@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALEGRÍA — Sopa de Letras</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="alegria.css" />
+</head>
+<body>
+  <div class="bg-space" aria-hidden="true"></div>
+
+  <header class="game-header" role="banner">
+    <h1 class="game-title">ALEGRÍA — Sopa de Letras</h1>
+    <div class="game-meta" aria-label="Información del juego">
+      <div class="chip chip--alegria">😊 Alegría</div>
+      <div class="meta-group">
+        <div class="meta-item">⏱ <span id="time">00:00</span></div>
+        <div class="meta-item">🎯 <span id="tries">0</span></div>
+        <div class="meta-item">⭐ <span id="found">0</span>/<span id="total">10</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="game">
+    <section class="board" aria-label="Tablero de sopa de letras">
+      <div class="grid" role="grid" aria-label="10 por 10">
+        <!-- Ejemplo de celdas de sopa de letras (puedes editarlas libremente) -->
+        <button class="cell">S</button><button class="cell">O</button><button class="cell">N</button><button class="cell">R</button><button class="cell">I</button><button class="cell">S</button><button class="cell">A</button><button class="cell">L</button><button class="cell">U</button><button class="cell">Z</button>
+        <button class="cell">J</button><button class="cell">U</button><button class="cell">G</button><button class="cell">A</button><button class="cell">R</button><button class="cell">M</button><button class="cell">U</button><button class="cell">S</button><button class="cell">I</button><button class="cell">C</button>
+        <button class="cell">O</button><button class="cell">L</button><button class="cell">O</button><button class="cell">R</button><button class="cell">E</button><button class="cell">S</button><button class="cell">A</button><button class="cell">M</button><button class="cell">I</button><button class="cell">G</button>
+        <button class="cell">R</button><button class="cell">I</button><button class="cell">S</button><button class="cell">A</button><button class="cell">F</button><button class="cell">E</button><button class="cell">L</button><button class="cell">I</button><button class="cell">Z</button><button class="cell">A</button>
+        <button class="cell">A</button><button class="cell">M</button><button class="cell">I</button><button class="cell">G</button><button class="cell">O</button><button class="cell">S</button><button class="cell">S</button><button class="cell">A</button><button class="cell">L</button><button class="cell">T</button>
+        <button class="cell">T</button><button class="cell">A</button><button class="cell">R</button><button class="cell">M</button><button class="cell">Ú</button><button class="cell">S</button><button class="cell">I</button><button class="cell">C</button><button class="cell">A</button><button class="cell">O</button>
+        <button class="cell">F</button><button class="cell">I</button><button class="cell">E</button><button class="cell">S</button><button class="cell">T</button><button class="cell">A</button><button class="cell">R</button><button class="cell">I</button><button class="cell">S</button><button class="cell">A</button>
+        <button class="cell">B</button><button class="cell">E</button><button class="cell">S</button><button class="cell">O</button><button class="cell">S</button><button class="cell">R</button><button class="cell">I</button><button class="cell">S</button><button class="cell">A</button><button class="cell">S</button>
+        <button class="cell">A</button><button class="cell">B</button><button class="cell">R</button><button class="cell">A</button><button class="cell">Z</button><button class="cell">O</button><button class="cell">S</button><button class="cell">P</button><button class="cell">R</button><button class="cell">E</button>
+        <button class="cell">M</button><button class="cell">I</button><button class="cell">O</button><button class="cell">S</button><button class="cell">A</button><button class="cell">M</button><button class="cell">I</button><button class="cell">G</button><button class="cell">O</button><button class="cell">S</button>
+      </div>
+    </section>
+
+    <aside class="sidebar">
+      <h2 class="sidebar__title">PALABRAS</h2>
+      <ul class="word-list">
+        <li>SONRISA</li><li>RISA</li><li>JUGAR</li><li>AMIGOS</li><li>FIESTA</li>
+        <li>MÚSICA</li><li>COLORES</li><li>ABRAZOS</li><li>PREMIO</li><li>SALTAR</li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer class="game-footer">
+    <a class="btn-secondary" href="menu.html">Volver al menú</a>
+    <button class="btn-primary" type="button" disabled>Reiniciar</button>
+  </footer>
+
+  <script src="alegria.js"></script>
+</body>
+</html>
