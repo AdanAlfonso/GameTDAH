@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TEMOR — Encuentra las diferencias</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="temor.css"/>
+</head>
+<body>
+  <div class="bg-space" aria-hidden="true"></div>
+
+  <header class="game-header" role="banner">
+    <h1 class="game-title">TEMOR — Encuentra las diferencias</h1>
+    <p class="game-subtitle">Observa con calma y encuentra al menos 5 diferencias</p>
+
+    <div class="game-meta" aria-label="Información del juego">
+      <div class="chip chip--temor" aria-hidden="true">😨 Temor</div>
+      <div class="meta-group">
+        <div class="meta-item">⏱ <span id="time">00:00</span></div>
+        <div class="meta-item">🔎 Restantes: <span id="left">5</span></div>
+        <div class="meta-item">⭐ Halladas: <span id="found">0</span>/5</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="game" role="main">
+    <!-- Tablero con dos imágenes: A y B -->
+    <section class="board" aria-label="Comparación de imágenes">
+      <div class="diff-grid">
+        <!-- Imagen A -->
+        <figure class="diff-wrap">
+          <figcaption class="diff-title">Imagen A</figcaption>
+          <div class="diff-stage">
+            <!-- Sustituye 'img/temor-A.jpg' por tu ruta real -->
+            <img src="ImagenA.png" alt="Escena A para comparar" class="diff-img"/>
+
+            <!-- Hotspots de referencia (mismos puntos que en B). 
+                 Sin JS no tienen acción; sirven para alinear y probar visualmente.
+                 Cuando agreguemos lógica, estos se harán clicables y marcarán la diferencia. -->
+            <button class="hotspot" data-id="1" style="top:18%; left:26%;" aria-label="Posible diferencia 1"></button>
+            <button class="hotspot" data-id="2" style="top:36%; left:68%;" aria-label="Posible diferencia 2"></button>
+            <button class="hotspot" data-id="3" style="top:55%; left:40%;" aria-label="Posible diferencia 3"></button>
+            <button class="hotspot" data-id="4" style="top:72%; left:20%;" aria-label="Posible diferencia 4"></button>
+            <button class="hotspot" data-id="5" style="top:80%; left:78%;" aria-label="Posible diferencia 5"></button>
+          </div>
+        </figure>
+
+        <!-- Imagen B -->
+        <figure class="diff-wrap">
+          <figcaption class="diff-title">Imagen B</figcaption>
+          <div class="diff-stage">
+            <!-- Sustituye 'img/temor-B.jpg' por tu ruta real -->
+            <img src="ImagenB.png" alt="Escena B para comparar" class="diff-img"/>
+
+            <!-- Hotspots espejo (mismas posiciones) -->
+            <button class="hotspot" data-id="1" style="top:18%; left:26%;" aria-label="Posible diferencia 1"></button>
+            <button class="hotspot" data-id="2" style="top:36%; left:68%;" aria-label="Posible diferencia 2"></button>
+            <button class="hotspot" data-id="3" style="top:55%; left:40%;" aria-label="Posible diferencia 3"></button>
+            <button class="hotspot" data-id="4" style="top:72%; left:20%;" aria-label="Posible diferencia 4"></button>
+            <button class="hotspot" data-id="5" style="top:80%; left:78%;" aria-label="Posible diferencia 5"></button>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Panel lateral con reglas y botones -->
+    <aside class="sidebar" aria-label="Ayuda y controles">
+      <h2 class="sidebar__title">Sugerencias</h2>
+      <ul class="tips">
+        <li>Aleja y acerca la mirada para notar cambios sutiles.</li>
+        <li>Revisa esquinas y objetos pequeños.</li>
+        <li>Tómate tu tiempo, respira.</li>
+      </ul>
+
+      <div class="controls">
+        <a class="btn-secondary" href="menu.html">Volver al menú</a>
+        <button class="btn-primary" type="button" disabled>Reiniciar</button>
+      </div>
+    </aside>
+  </main>
+  <script src="temor.js"></script>
+</body>
+</html>
