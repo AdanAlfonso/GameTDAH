@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FRUSTRACIÓN — Sopa de Letras</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="frustraccion.css" />
+</head>
+<body>
+  <div class="bg-space" aria-hidden="true"></div>
+
+  <header class="game-header" role="banner">
+    <h1 class="game-title">FRUSTRACIÓN — Sopa de Letras</h1>
+    <div class="game-meta" aria-label="Información del juego">
+      <div class="chip chip--frustracion">😤 Frustración</div>
+      <div class="meta-group">
+        <div class="meta-item">⏱ <span id="time">00:00</span></div>
+        <div class="meta-item">🎯 <span id="tries">0</span></div>
+        <div class="meta-item">⭐ <span id="found">0</span>/<span id="total">10</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="game" role="main">
+    <!-- Tablero 10x10 (maqueta accesible) -->
+    <section class="board" aria-label="Tablero de sopa de letras">
+      <div class="grid" role="grid" aria-label="10 por 10">
+        <!-- 100 celdas de ejemplo (puedes cambiarlas libremente) -->
+        <!-- Fila 1 -->
+        <button class="cell">P</button><button class="cell">A</button><button class="cell">C</button><button class="cell">I</button><button class="cell">E</button><button class="cell">N</button><button class="cell">C</button><button class="cell">I</button><button class="cell">A</button><button class="cell">X</button>
+        <!-- Fila 2 -->
+        <button class="cell">R</button><button class="cell">E</button><button class="cell">T</button><button class="cell">O</button><button class="cell">Q</button><button class="cell">M</button><button class="cell">A</button><button class="cell">N</button><button class="cell">D</button><button class="cell">O</button>
+        <!-- Fila 3 -->
+        <button class="cell">C</button><button class="cell">A</button><button class="cell">L</button><button class="cell">M</button><button class="cell">A</button><button class="cell">E</button><button class="cell">S</button><button class="cell">F</button><button class="cell">U</button><button class="cell">E</button>
+        <!-- Fila 4 -->
+        <button class="cell">A</button><button class="cell">P</button><button class="cell">R</button><button class="cell">E</button><button class="cell">N</button><button class="cell">D</button><button class="cell">E</button><button class="cell">R</button><button class="cell">A</button><button class="cell">S</button>
+        <!-- Fila 5 -->
+        <button class="cell">R</button><button class="cell">E</button><button class="cell">S</button><button class="cell">P</button><button class="cell">I</button><button class="cell">R</button><button class="cell">A</button><button class="cell">R</button><button class="cell">Z</button><button class="cell">L</button>
+        <!-- Fila 6 -->
+        <button class="cell">P</button><button class="cell">A</button><button class="cell">U</button><button class="cell">S</button><button class="cell">A</button><button class="cell">J</button><button class="cell">L</button><button class="cell">K</button><button class="cell">M</button><button class="cell">N</button>
+        <!-- Fila 7 -->
+        <button class="cell">E</button><button class="cell">N</button><button class="cell">F</button><button class="cell">O</button><button class="cell">Q</button><button class="cell">U</button><button class="cell">E</button><button class="cell">H</button><button class="cell">T</button><button class="cell">A</button>
+        <!-- Fila 8 -->
+        <button class="cell">I</button><button class="cell">N</button><button class="cell">T</button><button class="cell">E</button><button class="cell">N</button><button class="cell">T</button><button class="cell">O</button><button class="cell">S</button><button class="cell">X</button><button class="cell">Y</button>
+        <!-- Fila 9 -->
+        <button class="cell">E</button><button class="cell">S</button><button class="cell">F</button><button class="cell">U</button><button class="cell">E</button><button class="cell">R</button><button class="cell">Z</button><button class="cell">O</button><button class="cell">S</button><button class="cell">W</button>
+        <!-- Fila 10 -->
+        <button class="cell">A</button><button class="cell">V</button><button class="cell">A</button><button class="cell">N</button><button class="cell">C</button><button class="cell">E</button><button class="cell">S</button><button class="cell">N</button><button class="cell">O</button><button class="cell">R</button>
+      </div>
+    </section>
+
+    <!-- Lista de palabras (tema: gestionar la frustración) -->
+    <aside class="sidebar" aria-label="Palabras a encontrar">
+      <h2 class="sidebar__title">PALABRAS</h2>
+      <ul class="word-list">
+        <li>PACIECIA</li>
+        <li>CALMA</li>
+        <li>RESPIRAR</li>
+        <li>PAUSA</li>
+        <li>ENFOQUE</li>
+        <li>INTENTO</li>
+        <li>ESFUERZO</li>
+        <li>AVANCES</li>
+        <li>APRENDER</li>
+        <li>RETO</li>
+      </ul>
+      <div class="controls">
+        <a class="btn-secondary" href="menu.html">Volver al menú</a>
+        <button class="btn-primary" type="button" disabled>Reiniciar</button>
+      </div>
+    </aside>
+  </main>
+  <script src="frustracion.js"></script>
+</body>
+</html>
