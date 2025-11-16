@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crear Cuenta</title>
+
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+
+  <!-- Estilos del registro -->
+  <link rel="stylesheet" href="../estilos/registro.css" />
+</head>
+
+<body>
+  <div class="contenedorLogin">
+    
+    <!-- Panel con imagen -->
+    <div class="panelImagen" aria-hidden="true"></div>
+
+    <!-- Panel derecho -->
+    <div class="panelDatos">
+      <div class="cajaDatos" role="region" aria-labelledby="tituloRegistro">
+
+        <h1 id="tituloRegistro">CREAR NUEVA CUENTA</h1>
+
+        <form id="formRegistro" action="#" method="POST" novalidate>
+
+          <!-- Usuario -->
+          <label for="usuario">Usuario</label>
+          <div class="inputGroup">
+            <span class="inputIcon" aria-hidden="true">
+              <!-- User icon -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 12c2.761 0 5-2.239 5-5s-2.239-5-5-5-5 2.239-5 5 2.239 5 5 5Zm0 2c-4.418 0-8 2.239-8 5v1h16v-1c0-2.761-3.582-5-8-5Z"/>
+              </svg>
+            </span>
+            <input 
+              type="text" 
+              id="usuario" 
+              name="usuario" 
+              placeholder="Crea un usuario" 
+              minlength="6"
+              maxlength="20"
+              required
+            />
+          </div>
+
+          <!-- Nombre -->
+          <label for="nombre">Nombre</label>
+          <div class="inputGroup">
+            <span class="inputIcon" aria-hidden="true">
+              <!-- Icono persona -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2a5 5 0 1 0 0 10A5 5 0 0 0 12 2Zm0 12c-4.336 0-8 2-8 4v2h16v-2c0-2-3.664-4-8-4Z"/>
+              </svg>
+            </span>
+            <input 
+              type="text" 
+              id="nombre"
+              name="nombre"
+              placeholder="Ingresa tu nombre"
+              maxlength="30"
+              required
+            />
+          </div>
+
+          <!-- Edad -->
+          <label for="edad">Edad</label>
+          <div class="inputGroup">
+            <span class="inputIcon" aria-hidden="true">
+              <!-- Icono número -->
+              <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M5 4h14v2H5zm0 7h14v2H5zm0 7h14v2H5z"/>
+              </svg>
+            </span>
+            <input 
+              type="number" 
+              id="edad" 
+              name="edad" 
+              min="1" 
+              max="100"
+              placeholder="Edad"
+              required
+            />
+          </div>
+
+          <!-- Sexo -->
+          <label for="sexo">Sexo</label>
+          <div class="inputGroup">
+            <span class="inputIcon" aria-hidden="true">
+              <!-- Icono género -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 4a5 5 0 1 0 3.54 8.54A5 5 0 0 0 12 4Zm0-2a7 7 0 1 1 0 14A7 7 0 0 1 12 2Z"/>
+              </svg>
+            </span>
+            <select id="sexo" name="sexo" required>
+              <option value="" disabled selected>Selecciona una opción</option>
+              <option value="Masculino">Masculino</option>
+              <option value="Femenino">Femenino</option>
+            </select>
+          </div>
+
+          <!-- Contraseña -->
+          <label for="contrasena">Contraseña</label>
+          <div class="inputGroup">
+            <span class="inputIcon" aria-hidden="true">
+              <!-- Lock icon -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17 9h-1V7a4 4 0 1 0-8 0v2H7a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2Zm-6 7.732V17a1 1 0 1 1 2 0v-.268a2 2 0 1 1-2 0ZM9 7a3 3 0 1 1 6 0v2H9V7Z"/>
+              </svg>
+            </span>
+            <input 
+              type="password" 
+              id="contrasena" 
+              name="contrasena" 
+              placeholder="Crea una contraseña"
+              minlength="6"
+              maxlength="20"
+              required
+            />
+          </div>
+
+          <!-- Botón -->
+          <button type="submit" class="btn">
+            <span class="btnText">REGISTRARSE</span>
+          </button>
+
+          <!-- Volver al login -->
+          <div class="backLogin">
+            <a href="../index.html">¿Ya tienes una cuenta? Inicia sesión</a>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
