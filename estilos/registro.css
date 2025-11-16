@@ -1,0 +1,212 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo general */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #0a0033;
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Contenedor principal */
+.contenedorLogin {
+  display: flex;
+  height: 100vh;
+}
+
+/* Panel izquierdo con imagen */
+.panelImagen {
+  flex: 1;
+  background: 
+    linear-gradient(to right, rgba(10, 0, 40, 0.2), rgba(10, 0, 40, 0.4)),
+    url('../media/FondoLogin.jpg') no-repeat center center/cover;
+}
+
+/* Panel derecho */
+.panelDatos {
+  flex: 1;
+  background: linear-gradient(180deg, #18004d 0%, #0d0033 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Caja principal */
+.cajaDatos {
+  width: 80%;
+  max-width: 480px;
+  background: rgba(20, 0, 50, 0.65);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 25px rgba(123, 92, 255, 0.2);
+}
+
+/* Título */
+.cajaDatos h1 {
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 26px;
+  color: #d8cfff;
+  border-bottom: 2px solid #7b5cff;
+  padding-bottom: 8px;
+}
+
+/* Etiquetas */
+.cajaDatos label {
+  margin-top: 15px;
+  display: block;
+  font-size: 15px;
+  color: #b9b3ff;
+}
+
+/* Grupo con icono + input */
+.inputGroup {
+  position: relative;
+  margin-top: 6px;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #b9b3ff;
+}
+
+/* Inputs */
+.cajaDatos input,
+.cajaDatos select {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #e5e5ff;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.cajaDatos input:focus,
+.cajaDatos select:focus {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 10px #7b5cff;
+}
+
+/* Botón */
+.btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(90deg, #7b5cff 0%, #6a3ce6 100%);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 17px;
+  margin-top: 25px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #9a7dff 0%, #7b5cff 100%);
+  box-shadow: 0 0 20px rgba(123, 92, 255, 0.8);
+  transform: translateY(-2px);
+}
+
+/* Enlace volver */
+.backLogin {
+  text-align: center;
+  margin-top: 18px;
+}
+
+.backLogin a {
+  color: #b9b3ff;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.backLogin a:hover {
+  color: #e0d4ff;
+  text-shadow: 0 0 8px #7b5cff;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  /* 1) Permitir scroll en móvil */
+  body {
+    overflow: auto; /* antes hidden */
+  }
+
+  /* 2) Evitar alturas rígidas y usar dvh (viewport real) */
+  .contenedorLogin {
+    flex-direction: column;
+    height: auto;       /* ya no 100vh fijo */
+    min-height: 100dvh; /* ocupa toda la pantalla, respetando barras del navegador */
+  }
+
+  .panelImagen {
+    flex: none;
+    height: 36dvh; /* similar al login, ajustable */
+    background: url('../media/FondoLogin.jpg') no-repeat center center/cover;
+  }
+
+  .panelDatos {
+    flex: none;
+    min-height: 0;
+    background: linear-gradient(180deg, rgba(20,0,50,0.9), rgba(10,0,40,0.9));
+    display: flex;
+    align-items: flex-start; /* contenido arriba, no centrado */
+    justify-content: center;
+    padding: 20px 16px;
+
+    /* espacio extra abajo para que el botón no quede pegado */
+    padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+    overflow: auto; /* si se abre teclado, que el form pueda hacer scroll */
+  }
+
+  .cajaDatos {
+    width: 100%;
+    max-width: 520px;
+    background: rgba(10, 0, 40, 0.7);
+    box-shadow: 0 0 20px rgba(123, 92, 255, 0.2);
+    padding: 24px;
+    margin: 0 auto;
+  }
+
+  /* Menos verticalidad para que quepa */
+  .cajaDatos h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .cajaDatos input,
+  .cajaDatos select {
+    padding: 12px 12px 12px 40px;
+    font-size: 15px;
+  }
+
+  /* Evitar que el botón toque el borde inferior */
+  .btn {
+    margin-top: 14px;
+    margin-bottom: 8px;
+  }
+
+  .backLogin {
+    margin-top: 10px;
+  }
+}
